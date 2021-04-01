@@ -20,6 +20,10 @@ public class Background extends World
         
         addObject( new Robot(), 100, 50);
         
+        addObject( new Food(), 500, 50);
+        addObject( new Food(), 300, 300);
+        addObject( new Food(), 100, 300);
+        
         addObject( new Wall(), 50, 150);
         addObject( new Wall(), 100, 150);
         addObject( new Wall(), 150, 150);
