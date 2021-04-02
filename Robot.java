@@ -19,7 +19,6 @@ public class Robot extends Actor
     {
         checkKeyPress();
         eatFood();
-        animate();
        
          if( isTouching (Wall.class))
        {
@@ -34,26 +33,30 @@ public class Robot extends Actor
     {
         if(Greenfoot.isKeyDown("up"))
         {
-            setLocation( getX(), getY()-5);
             animate();
+            setLocation( getX(), getY()-5);
+            
    
         }
         if(Greenfoot.isKeyDown("down"))
         {
-            setLocation( getX(), getY()+5); 
             animate();
+            setLocation( getX(), getY()+5); 
+            
             
         }
         if(Greenfoot.isKeyDown("left"))
         {
-            setLocation( getX()-5, getY());
             animate();
+            setLocation( getX()-5, getY());
+            
             
         }
         if(Greenfoot.isKeyDown("right"))
         {
-            setLocation( getX()+5, getY());
             animate();
+            setLocation( getX()+5, getY());
+            
         
         }  
     }
