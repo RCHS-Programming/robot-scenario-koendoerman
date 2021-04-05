@@ -18,8 +18,8 @@ public class Background extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
         
-        showText();
-        
+        showText( "Score: 0", 50, 510);
+    
         addObject( new Robot(), 100, 50);
         
         addObject( new Food(), 500, 50);
@@ -38,10 +38,5 @@ public class Background extends World
         
         
 
-    }
-    public void showText()
-    {
-        getWorld().showText( "Lives : "+lives, 70, 540);
-        getWorlds().showText( "Pizzas : "+pizzaEaten, 70, 560);
     }
 }

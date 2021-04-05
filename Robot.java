@@ -10,7 +10,9 @@ public class Robot extends Actor
 {
     private GreenfootImage robotimage1= new GreenfootImage("man01.png");
     private GreenfootImage robotimage2= new GreenfootImage("man02.png");
+    private int pizzasEaten;
     private int eatPizza;
+    private int Lives;
     private int removeLife;
     /**
      * Act - do whatever the Robot wants to do. This method is called whenever
@@ -24,6 +26,11 @@ public class Robot extends Actor
         detectBarCollision();
         detectHouse();
         removeLife();
+        showStatus();
+    }
+    public Robot()
+    {
+        pizzasEaten = 0;
     }
     public void detectWallCollision()
     {
@@ -88,8 +95,12 @@ public class Robot extends Actor
           Greenfoot.playSound("eat.wav");
           removeTouching(Food.class);
           eatPizza = eatPizza + 1;
+         
+          getWorld().showText( "Score: 0" + pizzasEaten, 100, 370);
             
-            getWorld().showText("Score: " + eatPizza, 50, 510);
+         
+          
+
           }
     }    
     public void animate()
@@ -105,6 +116,7 @@ public class Robot extends Actor
     }
     public void removeLife()
     {
+     
         if( isTouching (Wall.class))
         {
          removeLife = removeLife - 1;   
@@ -113,12 +125,8 @@ public class Robot extends Actor
         {
          removeLife = removeLife - 1;   
         }
-        testEndGame();
-    }
-    public void testEndGame()
-    {
-        
-        
+        showText( "Lives: 3",65,350);
+     
     }
 }
     
