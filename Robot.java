@@ -8,16 +8,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Robot extends Actor
 {
+
     private GreenfootImage robotimage1= new GreenfootImage("man01.png");
     private GreenfootImage robotimage2= new GreenfootImage("man02.png");
     private int pizzasEaten;
     private int eatPizza;
     private int Lives;
     private int removeLife;
-    /**
-     * Act - do whatever the Robot wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     public void act() 
     {
         eatFood();
@@ -26,7 +23,7 @@ public class Robot extends Actor
         detectBarCollision();
         detectHouse();
         removeLife();
-        showStatus();
+  
     }
     public Robot()
     {
@@ -94,9 +91,9 @@ public class Robot extends Actor
           {
           Greenfoot.playSound("eat.wav");
           removeTouching(Food.class);
-          eatPizza = eatPizza + 1;
+          pizzasEaten = pizzasEaten + 1;
          
-          getWorld().showText( "Score: 0" + pizzasEaten, 100, 370);
+          getWorld().showText( "Score: " + pizzasEaten, 100, 370);
             
          
           
@@ -125,7 +122,7 @@ public class Robot extends Actor
         {
          removeLife = removeLife - 1;   
         }
-        showText( "Lives: 3",65,350);
+ 
      
     }
 }

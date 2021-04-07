@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Mon Apr 05 08:33:45 EDT 2021
+#Wed Apr 07 07:54:30 EDT 2021
 class.Ending.superclass=greenfoot.Actor
 class.House.superclass=greenfoot.Actor
 dependency9.type=UsesDependency
@@ -35,9 +35,9 @@ class.Robot.image=man01.png
 dependency2.to=Bar
 target1.width=80
 dependency5.type=UsesDependency
-editor.fx.0.y=116
+editor.fx.0.y=67
 target2.typeParameters=
-editor.fx.0.x=595
+editor.fx.0.x=644
 target8.height=50
 dependency3.to=House
 target3.showInterface=false

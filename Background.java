@@ -18,7 +18,7 @@ public class Background extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
         
-        showText( "Score: 0", 50, 510);
+        showText( "Score: 0", 100, 370);
     
         addObject( new Robot(), 100, 50);
         
